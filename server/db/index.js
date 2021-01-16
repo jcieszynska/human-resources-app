@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose
     .connect("mongodb+srv://jcieszynska:zaq12WSX@cluster0.mvpto.mongodb.net/employees?retryWrites=true&w=majority",
-    {useNewUrlParser: true})
+    {useNewUrlParser: true, useUnifiedTopology: true})
     .catch(e => {
         console.error("Connection error", e.message);
     })
