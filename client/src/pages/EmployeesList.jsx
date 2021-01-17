@@ -2,7 +2,8 @@ import React, { Component }from 'react'
 import api from '../api';
 
 import TableContainer from '../pages/TableContainer'
-
+import UpdateEmployee from '../components/UpdateEmployee'
+import DeleteEmployee from '../components/DeleteEmployee'
 
 class EmployeesList extends Component {
     constructor(props) {
@@ -56,7 +57,8 @@ class EmployeesList extends Component {
                 Header: 'Currency',
                 accessor: 'currency',
                 filterable: true,
-            }
+                
+            }, 
         ]
 
         return  (
