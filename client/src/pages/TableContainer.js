@@ -3,7 +3,7 @@ import { useTable } from "react-table"
 
 import styled from 'styled-components'
 const Wrapper = styled.div`
-    padding: 0 40px 40px 40px;
+    padding: 0 40px 40px 40px; 
 `
 
 const TableContainer = ({ columns, data }) => {
@@ -21,7 +21,7 @@ const TableContainer = ({ columns, data }) => {
 
   return (
 <Wrapper>
-    <table className="ui compact celled definition table" {...getTableProps()}>
+    <table className="ui striped selectable table" {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
@@ -38,7 +38,7 @@ const TableContainer = ({ columns, data }) => {
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map(cell => {
-                return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                return <td className="collapsing" {...cell.getCellProps()}>{cell.render("Cell")}</td>
               })}
             </tr>
           )

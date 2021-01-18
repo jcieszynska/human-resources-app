@@ -1,9 +1,11 @@
 import React, { Component }from 'react'
 import api from '../api';
 
+
 import TableContainer from '../pages/TableContainer'
 import UpdateEmployee from '../components/UpdateEmployee'
 import DeleteEmployee from '../components/DeleteEmployee'
+
 
 class EmployeesList extends Component {
     constructor(props) {
@@ -66,9 +68,8 @@ class EmployeesList extends Component {
                 Header: 'Action',
                 Cell: function(props) {
                     return (
-                        <span>
-                            <DeleteEmployee id={props.original}/>
-                            <UpdateEmployee id={props.original}/>
+                        <span>   
+                            <UpdateEmployee {...props}/>
                         </span>
                         
                     )
