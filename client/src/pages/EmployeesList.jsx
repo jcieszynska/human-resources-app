@@ -34,31 +34,46 @@ class EmployeesList extends Component {
             {
                 Header: 'ID',
                 accessor: '_id',
-                filterable: true,
             }, 
             {
                 Header: 'Name',
                 accessor: 'firstName',
-                filterable: true,
             }, 
             {
                 Header: 'Last Name',
                 accessor: 'lastName',
-                filterable: true,
             }, {
                 Header: 'Department',
                 accessor: 'department',
-                filterable: true,
             }, {
                 Header: 'Salary',
                 accessor: 'salary',
-                filterable: true,
+                Footer: info => {
+                    const total = React.useMemo(
+                      () =>
+                        info.rows.reduce((sum, row) => row.values.salary + sum, 0),
+                      [info.rows]
+                    )
+      
+                    return <>Total: {total}</>
+                  },
             }, {
                 Header: 'Currency',
                 accessor: 'currency',
-                filterable: true,
+                Footer: 'PLN',
                 
-            }, 
+            }, {
+                Header: 'Action',
+                Cell: function(props) {
+                    return (
+                        <span>
+                            <DeleteEmployee id={props.original}/>
+                            <UpdateEmployee id={props.original}/>
+                        </span>
+                        
+                    )
+                }
+            }
         ]
 
         return  (
