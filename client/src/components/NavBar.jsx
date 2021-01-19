@@ -5,10 +5,13 @@ import Logo from './Logo'
 import Links from './Links'
 
 const Container = styled.div.attrs({
-    className: 'ui container',
-})``
+    className: 'container',
+})`
+    height: 150px    
+`
 
 const Nav = styled.nav.attrs({
+    className: "navbar navbar-expand-lg navbar-light bg-light"
 })`
     margin-bottom: 20 px;
 `
@@ -16,12 +19,12 @@ const Nav = styled.nav.attrs({
 class NavBar extends Component {
     render() {
         return (
-            <Container>
-                <Nav>
-                    <Logo />
-                    <Links />
-                </Nav>
-            </Container>
+        <Container>
+            <Nav>
+                <Logo />
+                <Links />
+            </Nav>
+        </Container>
         )
     }
 }

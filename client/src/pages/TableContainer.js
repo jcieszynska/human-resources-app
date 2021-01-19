@@ -1,9 +1,12 @@
 import React from "react"
 import { useTable } from "react-table"
+import Links from '../components/Links'
+
 
 import styled from 'styled-components'
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px; 
+    fixed: left;
 `
 
 const TableContainer = ({ columns, data }) => {
@@ -21,7 +24,8 @@ const TableContainer = ({ columns, data }) => {
 
   return (
 <Wrapper>
-    <table className="ui striped selectable table" {...getTableProps()}>
+  <div className="ui grid">
+    <table className="ui selectable table" {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
@@ -54,6 +58,7 @@ const TableContainer = ({ columns, data }) => {
         ))}
       </tfoot>
     </table>
+    </div>
 </Wrapper>
   )
 }

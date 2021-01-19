@@ -33,6 +33,7 @@ const CancelButton = styled.a.attrs({
     className: `ui negative button`,
 })`
     margin: 15px 15px 15px 5px;
+
 `
 class EmployeesAdd extends Component {
     constructor(props) {
