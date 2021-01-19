@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import api from '../api'
 
+import api from '../api'
 import styled from 'styled-components'
 
 const Title = styled.h1.attrs({
@@ -36,6 +36,24 @@ const CancelButton = styled.a.attrs({
 `
 
 class EmployeesUpdate extends Component {
+
+    state = {
+        isParentOpen: false,
+        isChildOpen: false
+      }
+    
+      handleClick = () => {
+        this.setState({
+          isParentOpen: !this.state.isOpen
+        });
+      }
+    
+      handleFocus = () => {
+        this.setState({
+          isChildOpen: true
+        });
+      }
+    
     constructor(props) {
         super(props)
  
@@ -150,6 +168,7 @@ class EmployeesUpdate extends Component {
                 <CancelButton href={'/employees/list'}>Cancel</CancelButton>
                 </div>
             </Wrapper>
+
         )
     }
 }

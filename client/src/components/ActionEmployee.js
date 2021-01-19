@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import api from '../api';
 import '../style/style.css'
 
+import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal.js'
+
 
 const Update = styled.div.attrs({
     className: 'ui button',
-
 }
 )`
     color: #9382BD;
@@ -21,8 +22,18 @@ const Delete = styled.div.attrs({
 
 
 class UpdateEmployee extends Component {
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          modalOpen: false
+        }
+      }
+
+
     updateUser = event => {
         event.preventDefault();
+
 
         window.location.href = `/employees/edit/${this.props.id}`
     }
@@ -41,10 +52,27 @@ class UpdateEmployee extends Component {
 
     render() {
         return (
+        <div>        
         <div className="ui buttons">
-        <Update onClick={this.updateUser} >Edit</Update>
+        <Update 
+        onClick={this.updateUser} 
+        onClick={
+            () => {
+              this.setState({ modalOpen: true })
+            }
+        }
+        >Edit</Update>
+        <EmployeeUpdateModal 
+        modalOpen={this.state.modalOpen}
+        handleClose={
+            () => {
+                this.setState({ modalOpen: false })
+          }
+        }
+        />
         <div className="or"></div>
         <Delete onClick={this.deleteUser}>Delete</Delete>
+        </div>
         </div>)
     }
 }
