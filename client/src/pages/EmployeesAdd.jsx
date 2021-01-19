@@ -24,13 +24,13 @@ const InputText = styled.input.attrs({
 `
 
 const Button = styled.button.attrs({
-    className: `ui primary button`,
+    className: 'ui button',
 })`
     margin: 15px 15px 15px 5px;
 `
 
 const CancelButton = styled.a.attrs({
-    className: `ui negative button`,
+    className: 'ui negative button',
 })`
     margin: 15px 15px 15px 5px;
 

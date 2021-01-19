@@ -1,9 +1,9 @@
 .ui.buttons .button:first-child {
     /* background: #9382BD; */
+
+}
+.ui.buttons .button:last-child {
     background: #8470B2;
     color:white;
+
 }
-/* .ui.buttons .button:last-child {
-
-
-} */

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../api'
+// import { Button, Modal } from 'semantic-ui-react'
 
 import styled from 'styled-components'
 
@@ -10,7 +11,7 @@ const Title = styled.h1.attrs({
 const Wrapper = styled.div.attrs({
     className: 'ui form',
 })`
-    margin: 0 350px;
+
 `
 
 const Label = styled.label`
@@ -24,18 +25,17 @@ const InputText = styled.input.attrs({
 `
 
 const Button = styled.button.attrs({
-    className: `ui primary button`,
+    className: `ui button`,
 })`
     margin: 15px 15px 15px 5px;
 `
 
-const CancelButton = styled.a.attrs({
+const CancelButton = styled.button.attrs({
     className: `ui negative button`,
 })`
     margin: 15px 15px 15px 5px;
     display: inline-block;
 `
-
 class EmployeesUpdate extends Component {
     constructor(props) {
         super(props)
@@ -99,10 +99,14 @@ class EmployeesUpdate extends Component {
             currency: employee.currency
         })
     }
+
+    
+
     render() {
         const { firstName, lastName, department, salary, currency } = this.state
+        
         return (
-            <Wrapper>
+            <Wrapper className="ui raised segment">
                 <Title>Update an employee</Title>
                 <div class="ui divider"></div>
                 <Label>Name:  </Label>
@@ -145,6 +149,7 @@ class EmployeesUpdate extends Component {
                     value={currency}
                     onChange={this.handleChangeInputCurrency}
                 />
+
                 <div className="ui buttons">
                 <Button onClick={this.handleIncludeAnEmployee}>Update employee</Button>
                 <div className="or"></div>
@@ -154,5 +159,5 @@ class EmployeesUpdate extends Component {
         )
     }
 }
-
+  
 export default EmployeesUpdate

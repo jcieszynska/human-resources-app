@@ -27,7 +27,7 @@ function App() {
                     <i className="search icon"></i>
                     Find Employee
                     </div>
-                    <div className="field">
+                    {/* <div className="field">
                     <div className="ui search">
                         <div className="ui icon input">
                         <input className="prompt" type="text" placeholder="Search employees..." />
@@ -35,7 +35,10 @@ function App() {
                         </div>
                         <div className="results"></div>
                     </div>
-                    </div>
+                    </div> */}
+                    <Link to="/employees/list" className="ui black button">
+                    Go to the list
+                    </Link>
                 </div>
                 <div className="column">
                     <div className="ui icon header">

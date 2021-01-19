@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import api from '../api';
 import '../style/style.css'
 
+
 const Update = styled.div.attrs({
     className: 'ui button',
-    background: '#9382BD'
+
 }
 )`
     color: #9382BD;
