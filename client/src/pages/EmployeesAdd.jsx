@@ -4,13 +4,13 @@ import api from '../api';
 import styled from 'styled-components'
 
 const Title = styled.h1.attrs({
-    className: 'h1'
+    className: 'h3',
 })``
 
 const Wrapper = styled.div.attrs({
-    className: 'form-group'
+    className: 'ui form',
 })`
-    margin: 0 30 px;
+    margin: 0 350px;
 `
 
 const Label = styled.label`
@@ -18,19 +18,19 @@ const Label = styled.label`
 `
 
 const InputText = styled.input.attrs({
-    className: 'form-control',
+    className: 'ui transparent',
 })`
     margin: 5px;
 `
 
 const Button = styled.button.attrs({
-    className: `btn btn-primary`,
+    className: `ui primary button`,
 })`
     margin: 15px 15px 15px 5px;
 `
 
 const CancelButton = styled.a.attrs({
-    className: `btn btn-danger`,
+    className: `ui negative button`,
 })`
     margin: 15px 15px 15px 5px;
 `
@@ -89,23 +89,25 @@ class EmployeesAdd extends Component {
         return (
             <Wrapper> 
                 <Title>Add an employee</Title>
-
-                <Label>First Name: </Label>
+                <div class="ui divider"></div>
+                <Label>Name:  </Label>
                 <InputText 
+                    placeholder="First Name"
                     type="text"
                     value={firstName}
                     onChange={this.handleChangeInputFirstName}
                 />
-
-                <Label>Last Name: </Label>
                 <InputText 
+                    placeholder="Last Name"
                     type="text"
                     value={lastName}
                     onChange={this.handleChangeInputLastName}
                 />
+                
 
                 <Label>Department: </Label>
                 <InputText 
+                    placeholder="e.g. Marketing"
                     type="text"
                     value={department}
                     onChange={this.handleChangeInputDepartment}
@@ -113,6 +115,7 @@ class EmployeesAdd extends Component {
 
                 <Label>Salary: </Label>
                 <InputText 
+                    placeholder="Min. 2100"
                     type="number"
                     value={salary}
                     step="100"
@@ -122,13 +125,16 @@ class EmployeesAdd extends Component {
 
                 <Label>Currency: </Label>
                 <InputText 
+                    placeholder="PLN preffered"
                     type="text"
                     value={currency}
                     onChange={this.handleChangeInputCurrency}
                 />
-
-                <Button onClick={this.handleIncludeAnEmployee}>Add Employee</Button>
+                <div className="ui buttons">
+                <Button onClick={this.handleIncludeAnEmployee}>Add an employee</Button>
+                <div className="or"></div>
                 <CancelButton href={'/employees/list'}>Cancel</CancelButton>
+                </div>
             </Wrapper>
         )
     }

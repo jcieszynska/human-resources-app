@@ -3,8 +3,8 @@ import api from '../api';
 
 
 import TableContainer from '../pages/TableContainer'
-import UpdateEmployee from '../components/UpdateEmployee'
-import DeleteEmployee from '../components/DeleteEmployee'
+import ActionEmployee from '../components/ActionEmployee'
+
 
 
 class EmployeesList extends Component {
@@ -69,7 +69,7 @@ class EmployeesList extends Component {
                 Cell: function(props) {
                     return (
                         <span>   
-                            <UpdateEmployee {...props}/>
+                            <ActionEmployee id={props.original}/>
                         </span>
                         
                     )

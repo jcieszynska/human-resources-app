@@ -5,11 +5,10 @@ import Logo from './Logo'
 import Links from './Links'
 
 const Container = styled.div.attrs({
-    className: 'container',
+    className: 'ui container',
 })``
 
 const Nav = styled.nav.attrs({
-    className: 'navbar navbar-expand-lg navbar-dark bg-dark',
 })`
     margin-bottom: 20 px;
 `
