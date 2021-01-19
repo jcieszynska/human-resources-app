@@ -10,7 +10,7 @@ const Title = styled.h1.attrs({
 const Wrapper = styled.div.attrs({
     className: 'ui form',
 })`
-    margin: 0 350px;
+    margin: 0 200px;
 `
 
 const Label = styled.label`

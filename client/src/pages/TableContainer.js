@@ -1,5 +1,7 @@
 import React from "react"
 import { useTable } from "react-table"
+
+import { SideBar }  from '../components'
 import Links from '../components/Links'
 
 
@@ -24,11 +26,7 @@ const TableContainer = ({ columns, data }) => {
 
   return (
 <Wrapper>
-  <div className="ui raised segment">
-    <div className="ui three wide column">
-
-    </div>
-    <div className="ui thirteen wide column">
+  <div className="ui raised centered segment">
     <table className="ui selectable table" {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
@@ -63,7 +61,7 @@ const TableContainer = ({ columns, data }) => {
       </tfoot>
     </table>
     </div>
-    </div>
+  
 </Wrapper>
   )
 }

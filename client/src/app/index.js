@@ -4,12 +4,16 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { NavBar, SideBar } from '../components'
 import { EmployeesList, EmployeesAdd, EmployeesUpdate} from '../pages'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
     return (
         <Router>
-            <NavBar />
+            <div className="ui grid">
+            <div className="ui three wide column">
+            <SideBar />
+            </div>
+            <div className="ui thirteen wide column">
             <Switch>
                 <Route path="/employees/list" exact component={EmployeesList} />
                 <Route path="/employees/add" exact component={EmployeesAdd} />
@@ -53,6 +57,8 @@ function App() {
             </div>
             </div>
             </Switch>
+            </div>
+            </div>
         </Router>
     )
 }

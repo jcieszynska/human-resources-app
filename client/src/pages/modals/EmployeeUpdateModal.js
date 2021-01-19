@@ -94,7 +94,7 @@ class EmployeeUpdateModal extends React.Component {
     }
 
   confirmClick = (event, data) => {
-    console.log("Passed in Prop Value: " + this.props.valueIntoModal);
+
     this.props.handleClose();
   }
   
@@ -103,14 +103,15 @@ class EmployeeUpdateModal extends React.Component {
     return (
       <Modal 
         open={this.props.modalOpen}
-        size='large'
+        size='small'
         closeOnEscape={true}
-        closeOnRootNodeClick={true}
+        centered={true}
       >
-         <Wrapper className="ui raised segment">
+         <Wrapper className="ui raised centered segment">
                 <Header icon="browser" content="Update an employee" />
                 <div class="ui divider"></div>
                 <Modal.Content>
+
                 <Label>Name:  </Label>
                 <InputText 
                     placeholder="First Name"
@@ -118,13 +119,13 @@ class EmployeeUpdateModal extends React.Component {
                     value={firstName}
                     onChange={this.handleChangeInputFirstName}
                 />
+
                 <InputText 
                     placeholder="Last Name"
                     type="text"
                     value={lastName}
                     onChange={this.handleChangeInputLastName}
                 />
-                
 
                 <Label>Department: </Label>
                 <InputText 
@@ -151,6 +152,7 @@ class EmployeeUpdateModal extends React.Component {
                     value={currency}
                     onChange={this.handleChangeInputCurrency}
                 />
+
                 </Modal.Content>
                 <Modal.Actions>
                     <div className="ui buttons">
