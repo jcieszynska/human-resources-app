@@ -5,7 +5,7 @@ import api from '../api';
 import TableContainer from '../pages/TableContainer'
 import ActionEmployee from '../components/ActionEmployee'
 
-
+import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal'
 
 class EmployeesList extends Component {
     constructor(props) {

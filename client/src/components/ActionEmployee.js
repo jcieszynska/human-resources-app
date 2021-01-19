@@ -40,8 +40,9 @@ class UpdateEmployee extends Component {
     }
 
     render() {
-        return (<div className="ui buttons">
-        <Update onClick={this.updateUser}>Edit</Update>
+        return (
+        <div className="ui buttons">
+        <Update onClick={this.updateUser} >Edit</Update>
         <div className="or"></div>
         <Delete onClick={this.deleteUser}>Delete</Delete>
         </div>)
