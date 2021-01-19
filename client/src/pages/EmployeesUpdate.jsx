@@ -37,23 +37,6 @@ const CancelButton = styled.a.attrs({
 
 class EmployeesUpdate extends Component {
 
-    state = {
-        isParentOpen: false,
-        isChildOpen: false
-      }
-    
-      handleClick = () => {
-        this.setState({
-          isParentOpen: !this.state.isOpen
-        });
-      }
-    
-      handleFocus = () => {
-        this.setState({
-          isChildOpen: true
-        });
-      }
-    
     constructor(props) {
         super(props)
  
