@@ -24,7 +24,11 @@ const TableContainer = ({ columns, data }) => {
 
   return (
 <Wrapper>
-  <div className="ui grid">
+  <div className="ui raised segment">
+    <div className="ui three wide column">
+
+    </div>
+    <div className="ui thirteen wide column">
     <table className="ui selectable table" {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
@@ -58,6 +62,7 @@ const TableContainer = ({ columns, data }) => {
         ))}
       </tfoot>
     </table>
+    </div>
     </div>
 </Wrapper>
   )

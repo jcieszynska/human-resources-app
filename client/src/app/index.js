@@ -10,7 +10,6 @@ function App() {
     return (
         <Router>
             <NavBar />
-            <SideBar />
             <Switch>
                 <Route path="/employees/list" exact component={EmployeesList} />
                 <Route path="/employees/add" exact component={EmployeesAdd} />

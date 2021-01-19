@@ -1,19 +1,20 @@
 import React, { Component }from 'react'
 import styled from 'styled-components'
 import api from '../api';
+import '../style/style.css'
 
 const Update = styled.div.attrs({
-    className: 'ui yellow button',
+    className: 'ui button',
+    background: '#9382BD'
 }
 )`
-    color: #ef9b0f;
+    color: #9382BD;
     cursor: pointer;
 
 `
 const Delete = styled.div.attrs({
-    className: 'ui negative button'
+    className: 'ui button'
 })`
-    color: #ff0000;
     cursor: pointer;
 `
 
