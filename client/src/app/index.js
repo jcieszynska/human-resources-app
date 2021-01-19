@@ -9,7 +9,8 @@ import { EmployeesList, EmployeesAdd, EmployeesUpdate} from '../pages'
 function App() {
     return (
         <Router>
-            <div className="ui grid">
+            <NavBar />
+            <div className="ui bottom attached grid">       
             <div className="ui three wide column">
             <SideBar />
             </div>
@@ -31,15 +32,6 @@ function App() {
                     <i className="search icon"></i>
                     Find Employee
                     </div>
-                    {/* <div className="field">
-                    <div className="ui search">
-                        <div className="ui icon input">
-                        <input className="prompt" type="text" placeholder="Search employees..." />
-                        <i className="search icon"></i>
-                        </div>
-                        <div className="results"></div>
-                    </div>
-                    </div> */}
                     <Link to="/employees/list" className="ui black button">
                     Go to the list
                     </Link>

@@ -2,29 +2,34 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import Logo from './Logo'
-import Links from './Links'
 
-const Container = styled.div.attrs({
-    className: 'container',
-})`
-    height: 150px    
-`
+
+
 
 const Nav = styled.nav.attrs({
-    className: "ui secondary menu"
+    className: "ui top attached secondary menu"
 })`
     margin-bottom: 20 px;
+
 `
 
 class NavBar extends Component {
     render() {
         return (
-        <Container>
-            <Nav>
+
+            <Nav>            
                 <Logo />
-                <Links />
+                <div className="right menu">
+                    <div className="ui search">
+                        <div className="ui icon input">
+                        <input className="prompt" type="text" placeholder="Search employees..." />
+                        <i className="search icon"></i>
+                        </div>
+                        <div className="results"></div>
+                    </div>
+                </div>              
             </Nav>
-        </Container>
+
         )
     }
 }
