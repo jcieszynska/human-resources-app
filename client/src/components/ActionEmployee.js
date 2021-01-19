@@ -1,6 +1,6 @@
 import React, { Component }from 'react'
 import styled from 'styled-components'
-import api from '../api';
+import apis from '../api';
 import '../style/style.css'
 
 import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal.js'
@@ -8,6 +8,7 @@ import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal.js'
 
 const Update = styled.div.attrs({
     className: 'ui button',
+
 }
 )`
     color: #9382BD;
@@ -45,7 +46,7 @@ class UpdateEmployee extends Component {
             window.confirm(`Are you sure you want to delete the employee ${this.props.id} permanently?`, 
             )
         ) {
-            api.deleteEmployeeById(this.props.id)
+            apis.deleteEmployeeById(this.props.id)
             window.location.reload()
         }
     }
@@ -62,6 +63,7 @@ class UpdateEmployee extends Component {
             }
         }
         >Edit</Update>
+        
         <EmployeeUpdateModal 
         modalOpen={this.state.modalOpen}
         handleClose={

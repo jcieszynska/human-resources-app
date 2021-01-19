@@ -9,7 +9,7 @@ import Logo from './Logo'
 const Nav = styled.nav.attrs({
     className: "ui top attached secondary menu"
 })`
-    margin-bottom: 20 px;
+    margin: 20 px;
 
 `
 

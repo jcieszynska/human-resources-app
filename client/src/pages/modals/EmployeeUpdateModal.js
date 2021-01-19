@@ -8,7 +8,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div.attrs({
     className: 'ui form',
 })`
-`
+` 
 
 
 const CancelButton = styled.a.attrs({
@@ -32,7 +32,7 @@ class EmployeeUpdateModal extends React.Component {
         super(props)
  
         this.state = {
-           // id: this.props.match.params.id,
+            //id: this.props.match.params.id,
             firstName: '',
             lastName: '',
             department: '',

@@ -7,7 +7,7 @@ import '../style/style.css'
 class SideBar extends Component {
     render() {
         return (
-            <div className="ui vertical fluid tabular menu">
+            <div className="ui secondary vertical menu">
  
                 <Link to="/" className="active item">
                     Home

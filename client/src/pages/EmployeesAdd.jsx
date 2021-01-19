@@ -64,7 +64,7 @@ class EmployeesAdd extends Component {
         const salary = event.target.value
         this.setState({ salary })
     }
-    handleChangeInputCurrency = async event => {
+    handleChangeInputCurrency = async event => { 
         const currency = event.target.value
         this.setState({ currency })
     }

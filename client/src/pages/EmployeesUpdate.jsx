@@ -36,7 +36,6 @@ const CancelButton = styled.a.attrs({
 `
 
 class EmployeesUpdate extends Component {
-
     constructor(props) {
         super(props)
  
@@ -74,7 +73,7 @@ class EmployeesUpdate extends Component {
         const { id, firstName, lastName, department, salary, currency } = this.state
         const payload = { firstName, lastName, department, salary, currency }
 
-        await api.updateEmployee(id, payload).then(res => {
+        await api.updateEmployeeById(id, payload).then(res => {
             window.alert(`Employee updated successfully`)
             this.setState({ 
                 firstName: '',
@@ -89,16 +88,18 @@ class EmployeesUpdate extends Component {
 
     componentDidMount = async () => {
         const { id } = this.state
-        const employee = api.getEmployeeById(id)
+        const employee = await api.getEmployeeById(id)
 
         this.setState({ 
-            firstName: employee.firstName,
-            lastName: employee.lastName,
-            department: employee.department,
-            salary: employee.salary,
-            currency: employee.currency
+            firstName: employee.data.data.firstName,
+            lastName: employee.data.data.lastName,
+            department: employee.data.data.department,
+            salary: employee.data.data.salary,
+            currency: employee.data.data.currency
         })
     }
+
+
     render() {
         const { firstName, lastName, department, salary, currency } = this.state
         return (
