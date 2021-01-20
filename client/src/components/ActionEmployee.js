@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import apis from '../api';
 import '../style/style.css'
 
-import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal.js'
+import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal'
 
 
 const Update = styled.div.attrs({
@@ -64,7 +64,7 @@ class UpdateEmployee extends Component {
         }
         >Edit</Update>
         
-        <EmployeeUpdateModal 
+        <EmployeeUpdateModal
         modalOpen={this.state.modalOpen}
         handleClose={
             () => {

@@ -1,5 +1,5 @@
 import React, { Component }from 'react'
-import apis from '../api';
+import api from '../api';
 
 
 import TableContainer from '../pages/TableContainer'
@@ -20,7 +20,7 @@ class EmployeesList extends Component {
     componentDidMount = async () => {
         this.setState({ isLoading: true })
 
-        await apis.getAllEmployees().then(employees => {
+        await api.getAllEmployees().then(employees => {
         this.setState({
             employees: employees.data.data,
             isLoading: false,
@@ -66,10 +66,11 @@ class EmployeesList extends Component {
                 
             }, {
                 Header: 'Action',
+                accessor: 'action',
                 Cell: function(props) {
                     return (
                         <span>   
-                            <ActionEmployee id={props.original}/>
+                            <ActionEmployee id={props.row.original._id}/>
                         </span>
                         
                     )

@@ -99,7 +99,6 @@ class EmployeesUpdate extends Component {
         })
     }
 
-
     render() {
         const { firstName, lastName, department, salary, currency } = this.state
         return (
@@ -147,7 +146,7 @@ class EmployeesUpdate extends Component {
                     onChange={this.handleChangeInputCurrency}
                 />
                 <div className="ui buttons">
-                <Button onClick={this.handleIncludeAnEmployee}>Update employee</Button>
+                <Button onClick={this.handleUpdateEmployee}>Update employee</Button>
                 <div className="or"></div>
                 <CancelButton href={'/employees/list'}>Cancel</CancelButton>
                 </div>
