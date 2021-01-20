@@ -33,7 +33,7 @@ The application was designed in a minimalistic style
 
 
 ## Setup
-To install this application you need to clone this repository. Next open it, preferrably in Visual Studio, go to client folder and type "npm start" in the command prompt, next go to the server folder and type the "npm start" command.
+To install this application you need to clone this repository. Next open it, preferrably in Visual Studio, go to client folder and type "npm start" in the command prompt, next go to the server folder and type the "npm start" command. The application should start itself in a new browser window. Please note, it won't work without one another (both client and server need to be started).
 
 ## Code Examples
 Updates the user in the remote database and frontside as well:
@@ -116,7 +116,7 @@ updateEmployee = async (req, res) => {
 }
 ```
 The modal with a form to update the employee
-```javascipt
+```html
       <Modal 
         open={this.props.modalOpen}
         size='small'
