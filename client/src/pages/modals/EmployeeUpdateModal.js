@@ -2,6 +2,7 @@ import React from 'react'
 import { Modal, Header, Button, Icon } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 
+
 import api from '../../api'
 import styled from 'styled-components'
 
@@ -32,7 +33,7 @@ class EmployeeUpdateModal extends React.Component {
         super(props)
  
         this.state = {
-            //id: this.props.match.params.id,
+            id: this.props.id,
             firstName: '',
             lastName: '',
             department: '',
@@ -66,10 +67,9 @@ class EmployeeUpdateModal extends React.Component {
         const { id, firstName, lastName, department, salary, currency } = this.state
         const payload = { firstName, lastName, department, salary, currency }
 
-        await api.updateEmployee(id, payload).then(res => {
+        await api.updateEmployeeById(id, payload).then(res => {
             window.alert(`Employee updated successfully`)
             this.setState({ 
-                id: this.props.match.params.id,
                 firstName: '',
                 lastName: '',
                 department: '',
@@ -156,9 +156,9 @@ class EmployeeUpdateModal extends React.Component {
                 </Modal.Content>
                 <Modal.Actions>
                     <div className="ui buttons">
-                        <Button onClick={this.handleIncludeAnEmployee}>Update employee</Button>
+                        <Button onClick={this.handleUpdateEmployee}>Update employee</Button>
                     <div className="or"></div>
-                        <CancelButton href={'/employees/list'}>Cancel</CancelButton>
+                        <CancelButton href={'/employees/list'}>Exit</CancelButton>
                     </div>
                 </Modal.Actions>
             </Wrapper>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-
+import { Container } from 'semantic-ui-react'
 import { NavBar, SideBar } from '../components'
 import { EmployeesList, EmployeesAdd, EmployeesUpdate} from '../pages'
 
@@ -8,6 +8,7 @@ import { EmployeesList, EmployeesAdd, EmployeesUpdate} from '../pages'
 
 function App() {
     return (
+        <Container>
         <Router>
             <NavBar />
             <div className="ui bottom attached grid">       
@@ -52,6 +53,7 @@ function App() {
             </div>
             </div>
         </Router>
+        </Container>
     )
 }
 

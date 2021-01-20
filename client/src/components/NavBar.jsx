@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import { Menu } from 'semantic-ui-react'
 import styled from 'styled-components'
 
+
 import Logo from './Logo'
+
 
 
 
@@ -14,10 +17,14 @@ const Nav = styled.nav.attrs({
 `
 
 class NavBar extends Component {
-    render() {
-        return (
+    state = {}
 
-            <Nav>            
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
+    render() {
+    const { activeItem } = this.state
+        return (
+        <Menu top attached secondary menu>                     
                 <Logo />
                 <div className="right menu">
                     <div className="ui search">
@@ -28,8 +35,8 @@ class NavBar extends Component {
                         <div className="results"></div>
                     </div>
                 </div>              
-            </Nav>
-
+            
+        </Menu>
         )
     }
 }

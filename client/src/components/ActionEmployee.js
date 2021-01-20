@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import apis from '../api';
 import '../style/style.css'
 
+
 import EmployeeUpdateModal from '../pages/modals/EmployeeUpdateModal'
 
 
@@ -22,7 +23,7 @@ const Delete = styled.div.attrs({
 `
 
 
-class UpdateEmployee extends Component {
+class ActionEmployee extends Component {
     constructor(props) {
         super(props);
     
@@ -65,6 +66,7 @@ class UpdateEmployee extends Component {
         >Edit</Update>
         
         <EmployeeUpdateModal
+        id={this.props.id}
         modalOpen={this.state.modalOpen}
         handleClose={
             () => {
@@ -79,4 +81,4 @@ class UpdateEmployee extends Component {
     }
 }
 
-export default UpdateEmployee
+export default ActionEmployee

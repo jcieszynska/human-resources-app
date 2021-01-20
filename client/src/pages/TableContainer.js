@@ -2,11 +2,9 @@ import React from "react"
 import { useTable, usePagination } from "react-table"
 import { Input, CustomInput } from "reactstrap"
 
-import { SideBar }  from '../components'
-import Links from '../components/Links'
-
 
 import styled from 'styled-components'
+
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px; 
     fixed: left;
@@ -47,7 +45,7 @@ const TableContainer = ({ columns, data }) => {
   };
 
   return (
-<Wrapper>
+
   <div className="ui raised centered segment">
     <table className="ui selectable table" {...getTableProps()}>
       <thead>
@@ -137,7 +135,7 @@ const TableContainer = ({ columns, data }) => {
       </div>
     </div>
     </div>
-</Wrapper>
+
   )
 }
 

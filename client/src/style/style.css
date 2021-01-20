@@ -5,3 +5,10 @@
 
 }
 
+.ui.secondary.vertical.pointing.menu .item {
+    padding: 20%;
+}
+
+.ui.attached.menu:not(.tabular) {
+    border: 20px solid white;
+}

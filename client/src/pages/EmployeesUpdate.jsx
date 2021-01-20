@@ -83,7 +83,7 @@ class EmployeesUpdate extends Component {
                 currency: ''
             })
         })
-
+ 
     }
 
     componentDidMount = async () => {
